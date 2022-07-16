@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  font-family: "Barlow";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  .background {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+
+    img {
+      height: 100%;
+      top: 0;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .bg {
+      width: 100%;
+    }
+
+    .element1 {
+      left: 0;
+    }
+    .element2 {
+      right: 0;
+    }
+  }
+
+  header {
+    height: 15vh;
+    background-color: white;
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-size: 24px;
+      font-style: italic;
+      letter-spacing: 12px;
+      background-color: #58beb9;
+      padding: 8px 40px 8px 12px;
+      margin-left: 15%;
+      margin-right: auto;
+      font-weight: bold;
+    }
+
+    button {
+      font-weight: bold;
+      font-size: 18px;
+      border: 2px solid black;
+      border-radius: 8px;
+      padding: 6px 12px 8px 12px;
+      margin-right: 10%;
+      cursor: pointer;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  main {
+    height: 85vh;
+    width: 100%;
+    background-color: #3a805d;
+    position: relative;
+
+    .control-group {
+      position: absolute;
+      bottom: 10%;
+      left: 40%;
+      z-index: 100;
+
+      display: flex;
+      align-items: center ;
+      gap: 10px;
+
+      border: 2px solid black;
+      border-radius: 8px;
+      padding: 6px 12px;
+
+      height: 54px;
+
+      .mint-cnt {
+        width: 30px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      .ctrl-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        button {
+          border: 10px solid black;
+          outline: none;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          padding: 0;
+        }
+        .up {
+          border-color: #3a805d #3a805d black #3a805d;
+        }
+        .down {
+          border-color: black #3a805d #3a805d #3a805d;
+        }
+      }
+
+      .mint-button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 6px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
